@@ -1,0 +1,47 @@
+[
+  {
+    "bindings": {
+      "ctrl-left": "pane::SplitAndMoveLeft", // move file to left split
+      "ctrl-right": "pane::SplitAndMoveRight", // move file to right split
+      "ctrl-up": "pane::SplitAndMoveUp", // move file to top split
+      "ctrl-down": "pane::SplitAndMoveDown", // move file to bottom split
+    },
+  },
+  {
+    "bindings": {
+      "ctrl-h": "workspace::ActivatePaneLeft", // focus left split
+      "ctrl-l": "workspace::ActivatePaneRight", // focus right split
+      "ctrl-j": "workspace::ActivatePaneUp", // focus top split
+      "ctrl-k": "workspace::ActivatePaneDown", // focus bottom split
+    },
+  },
+  {
+    "context": "(ProjectPanel && not_editing)",
+    "bindings": {
+      "enter": "project_panel::Open", // open file
+      "ctrl-enter": "project_panel::OpenSplitVertical", // open file on right split
+    },
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-alt-w": "workspace::CloseInactiveTabsAndPanes",
+    },
+  },
+  {
+    "bindings": {
+      "ctrl-alt-k": "zed::OpenKeymapFile", // open keymap.json
+    },
+  },
+  {
+    "context": "(Editor && extension == md)",
+    "bindings": {
+      "ctrl-k v": "markdown::OpenPreviewToTheSide",
+    },
+  },
+  {
+    "bindings": {
+      "ctrl-k ctrl-o": "workspace::Open", // open folder
+    },
+  },
+]
