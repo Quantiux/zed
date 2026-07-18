@@ -41,7 +41,18 @@
   },
   {
     "bindings": {
-      "ctrl-k ctrl-o": "workspace::Open", // open folder
+      "ctrl-shift-l": ["task::Spawn", { "task_name": "LazyGit", "reveal_target": "center" }], // open Lazygit
     },
   },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "enter": ["project_panel::OpenPermanent", "editor::FocusActiveEditor"], // auto-focus editor upon file open
+    },
+  },
+  // {
+  //   "bindings": {
+  //     "ctrl-k ctrl-o": "workspace::Open", // open folder
+  //   },
+  // },
 ]
