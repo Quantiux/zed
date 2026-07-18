@@ -1,18 +1,89 @@
 [
+  // disable these default keybindings to enable those below
   {
-    "bindings": {
-      "ctrl-left": "pane::SplitAndMoveLeft", // move file to left split
-      "ctrl-right": "pane::SplitAndMoveRight", // move file to right split
-      "ctrl-up": "pane::SplitAndMoveUp", // move file to top split
-      "ctrl-down": "pane::SplitAndMoveDown", // move file to bottom split
+    "context": "Editor",
+    "unbind": {
+      "ctrl-shift-right": "editor::SelectToNextWordEnd",
+      "ctrl-shift-left": "editor::SelectToPreviousWordStart",
+      "ctrl-shift-down": ["editor::SelectNext", { "replace_newest": false }],
+      "ctrl-shift-up": ["editor::SelectPrevious", { "replace_newest": false }],
     },
   },
   {
+    // (source: https://www.reddit.com/r/ZedEditor/comments/1jk1evh/comment/mjt41c0/)
+    "context": "Workspace",
     "bindings": {
-      "ctrl-h": "workspace::ActivatePaneLeft", // focus left split
-      "ctrl-l": "workspace::ActivatePaneRight", // focus right split
-      "ctrl-j": "workspace::ActivatePaneUp", // focus top split
-      "ctrl-k": "workspace::ActivatePaneDown", // focus bottom split
+      "ctrl-shift-right": ["workspace::MoveItemToPaneInDirection", { "direction": "right" }], // move file to right split
+      "ctrl-shift-left": ["workspace::MoveItemToPaneInDirection", { "direction": "left" }], // move file to left split
+      "ctrl-shift-down": ["workspace::MoveItemToPaneInDirection", { "direction": "down" }], // move file to bottom split
+      "ctrl-shift-up": ["workspace::MoveItemToPaneInDirection", { "direction": "up" }], // move file to top split
+    },
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-1": "workspace::ActivatePaneLeft", // focus left split
+      "ctrl-2": "workspace::ActivatePaneRight", // focus right split
+      "ctrl-3": "workspace::ActivatePaneUp", // focus top split
+      "ctrl-4": "workspace::ActivatePaneDown", // focus bottom split
+    },
+  },
+  // disable all default keybinding `ctrl-m`
+  {
+    "context": "Editor",
+    "unbind": {
+      "ctrl-m": "editor::MoveToEnclosingBracket",
+    },
+  },
+  {
+    "context": "NotebookEditor",
+    "unbind": {
+      "ctrl-m": "notebook::AddCodeBlock",
+    },
+  },
+  {
+    "context": "NotebookEditor > Editor",
+    "unbind": {
+      "ctrl-m": "notebook::AddCodeBlock",
+    },
+  },
+  {
+    "context": "SettingsWindow",
+    "unbind": {
+      "ctrl-m": "settings_editor::Minimize",
+    },
+  },
+  // enable keybinding `ctrl-m`
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-m": "editor::FindNextMatch", // jump to next match
+    },
+  },
+  // disable all default keybinding `ctrl-shift-m`
+  {
+    "context": "Workspace",
+    "unbind": {
+      "ctrl-shift-m": "diagnostics::Deploy",
+    },
+  },
+  {
+    "context": "NotebookEditor",
+    "unbind": {
+      "ctrl-shift-m": "notebook::AddMarkdownBlock",
+    },
+  },
+  {
+    "context": "NotebookEditor > Editor",
+    "unbind": {
+      "ctrl-shift-m": "notebook::AddMarkdownBlock",
+    },
+  },
+  // enable keybinding `ctrl-shift-m`
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-shift-m": "editor::FindPreviousMatch", // jump to previous match
     },
   },
   {
@@ -41,7 +112,7 @@
   },
   {
     "bindings": {
-      "ctrl-shift-l": ["task::Spawn", { "task_name": "LazyGit", "reveal_target": "center" }], // open Lazygit
+      "ctrl-shift-z": ["task::Spawn", { "task_name": "LazyGit", "reveal_target": "center" }], // open Lazygit
     },
   },
   {
