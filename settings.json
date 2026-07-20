@@ -76,6 +76,7 @@
         "string.doc": {
           "font_style": "italic",
           "color": "#7e86b9",
+          // "color": "#a7cdf3",
           // "color": "#699BC3",
         },
       },
