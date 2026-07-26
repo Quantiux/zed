@@ -162,7 +162,7 @@
     "quick_actions": false,
   },
   "project_panel": {
-    "default_width": 300,
+    "default_width": 350,
     "drag_and_drop": false,
     "indent_guides": {
       "show": "never",
