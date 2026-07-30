@@ -111,14 +111,14 @@
     },
   },
   {
-    "bindings": {
-      "ctrl-shift-z": ["task::Spawn", { "task_name": "LazyGit", "reveal_target": "center" }], // open Lazygit
-    },
-  },
-  {
     "context": "ProjectPanel",
     "bindings": {
       "enter": ["project_panel::OpenPermanent", "editor::FocusActiveEditor"], // auto-focus editor upon file open
+    },
+  },
+  {
+    "bindings": {
+      "ctrl-shift-z": ["task::Spawn", { "task_name": "LazyGit", "reveal_target": "center" }], // open Lazygit
     },
   },
   // {

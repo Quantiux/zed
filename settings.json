@@ -270,7 +270,7 @@
       "indent_list_on_tab": true,
       "remove_trailing_whitespace_on_save": true,
     },
-    "Lua": {},
+    // "Lua": {},
   },
   "lsp": {
     "basedpyright": {
