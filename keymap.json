@@ -105,12 +105,6 @@
     },
   },
   {
-    "context": "(Editor && extension == md)",
-    "bindings": {
-      "ctrl-k v": "markdown::OpenPreviewToTheSide",
-    },
-  },
-  {
     "context": "ProjectPanel",
     "bindings": {
       "enter": ["project_panel::OpenPermanent", "editor::FocusActiveEditor"], // auto-focus editor upon file open
@@ -118,9 +112,22 @@
   },
   {
     "bindings": {
-      "ctrl-shift-z": ["task::Spawn", { "task_name": "LazyGit", "reveal_target": "center" }], // open Lazygit
+      "ctrl-shift-z": ["task::Spawn", { "task_name": "LazyGit" }], // open Lazygit
     },
   },
+  {
+    "context": "(Editor && extension == md)",
+    "bindings": {
+      "ctrl-k v": ["task::Spawn", { "task_name": "Markdown Preview" }], // open preview
+      "ctrl-alt-p": ["task::Spawn", { "task_name": "Export PDF" }], // export pdf
+    },
+  },
+  // {
+  //   "context": "(Editor && extension == md)",
+  //   "bindings": {
+  //     "ctrl-k v": "markdown::OpenPreviewToTheSide",
+  //   },
+  // },
   // {
   //   "bindings": {
   //     "ctrl-k ctrl-o": "workspace::Open", // open folder
