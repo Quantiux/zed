@@ -162,7 +162,7 @@
     "quick_actions": false,
   },
   "project_panel": {
-    "default_width": 350,
+    "default_width": 300,
     "drag_and_drop": false,
     "indent_guides": {
       "show": "never",
@@ -290,7 +290,8 @@
         "MD024": false, // allow duplicate headings
         "MD029": false, // allow custom ordered list prefixes
         "MD033": false, // allow inline HTML
-        "MD036": false, // allow emphasis as heading
+        // "MD036": false, // allow emphasis as heading
+        "MD041": false, // disable first line heading level warning
         "MD059": false, // allow non-descriptive link text
         "MD060": false, // allow table misalignment
       },
